@@ -1,0 +1,42 @@
+{
+  "name": "ssr",
+  "version": "1.0.0",
+  "main": "index.js",
+  "license": "MIT",
+  "scripts": {
+    "webpack": "NODE_ENV=development webpack --watch",
+    "sass-watch": "sass --watch src/assets/styles/main_style.scss:public/css/style.css --style compressed",
+    "dev-server": "NODE_ENV=development nodemon --watch server.js --exec \"node server.js\"",
+    "start": "concurrently \"npm:dev-server\" \"npm:webpack\" \"npm:sass-watch\""
+  },
+  "dependencies": {
+    "@babel/core": "^7.12.3",
+    "@babel/preset-env": "^7.12.1",
+    "@babel/preset-react": "^7.12.5",
+    "axios": "^0.21.0",
+    "babel-cli": "^6.26.0",
+    "babel-loader": "^8.2.1",
+    "babel-polyfill": "^6.26.0",
+    "express": "^4.17.1",
+    "file-loader": "^6.2.0",
+    "ignore-loader": "^0.1.2",
+    "path": "^0.12.7",
+    "react": "^17.0.1",
+    "react-dom": "^17.0.1",
+    "react-helmet": "^6.1.0",
+    "react-redux": "^7.2.2",
+    "react-router": "^5.2.0",
+    "react-router-config": "^5.1.1",
+    "react-router-dom": "^5.2.0",
+    "redux": "^4.0.5",
+    "redux-devtools-extension": "^2.13.8",
+    "redux-thunk": "^2.3.0",
+    "sass-loader": "^10.1.0",
+    "serialize-javascript": "^5.0.1",
+    "webpack": "^5.4.0",
+    "webpack-node-externals": "^2.5.2"
+  },
+  "devDependencies": {
+    "webpack-cli": "^4.2.0"
+  }
+}
